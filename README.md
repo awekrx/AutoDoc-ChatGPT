@@ -1,6 +1,9 @@
 # AutoDoc-ChatGPT
 
-This is a ChatGPT based prompt generation model for MidJorney. The purpose of this model is to simplify the creation of images and increase their creativity. By introducing a partial hint, ChatGPT creates a follow-up that can be used to stimulate creativity and provide new ideas.
+AutoDoc-ChatGPT is a Python script that leverages the power of ChatGPT model to automatically generate documentation for any programming language.
+
+With AutoDoc-ChatGPT, you can easily generate comprehensive documentation for your codebase. Simply provide the path to file you wish to document, and AutoDoc-ChatGPT will generate a detailed description of its functionality, parameters, and return values in natural language.
+
 
 ## Getting Started
 
@@ -39,6 +42,17 @@ The path to the file can be either relative or absolute.
 
 After execution, the file `yourfilename_commented.language` is created in the folder with the desired file.
 
+OR
+
+```bash
+py main.py -file "path to the file" -example "path to the example file"
+```
+
+__Not recommended, little tested.__
+You can specify a file with a comment option to create such comments.
+
+### Usage example
+
 ![Usage preview](./images/usage-preview.png)
 
 ## Alternative usage
@@ -61,7 +75,8 @@ auth = {
 result = AutoDoc(
         auth,
         "Code for commenting",
-        "language code. P.S. See Supported languages",
+        "language code",
+        "example comment model (optional)"
     ).start()
 print(result)
 # out: Code with comments
