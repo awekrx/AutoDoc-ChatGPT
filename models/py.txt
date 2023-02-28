@@ -1,0 +1,41 @@
+Write Google Style documentations all classes and functions (If there are no functions, then variables do not need to be commented) for code:
+
+CODE
+
+Write your answer in the format:
+|class/def Name|
+Description: ...
+Arguments: ...
+Returns: ...
+
+Example:
+|class Splitter|
+Description: This class takes a code string and a language string and splits the code into sections based on language-specific separators.
+
+Arguments:
+
+code (str): A string of code to be split
+language (str): A string representing the language of the code (e.g. "py" for Python)
+|def __init__|
+Description: Initializes a Splitter instance with the given code and language.
+
+Arguments:
+
+code (str): A string of code to be split
+language (str): A string representing the language of the code (e.g. "py" for Python)
+|def split|
+Description: Splits the code into sections based on language-specific separators.
+
+Arguments: None
+
+Returns:
+
+list[str]: A list of strings representing the sections of the code.
+|def py|
+Description: A method that splits Python code into sections based on class and function definitions.
+
+Arguments: None
+
+Returns:
+
+list: A list of strings representing the sections of the Python code.
