@@ -17,12 +17,8 @@ colorama_init()
 
 
 class AutoDoc:
-    def __init__(self, token: str, code: str, language: str, example: str = ""):
-        self.__token = token
-        if not isinstance(self.__token, str):
-            exit(f"[{RED}Error{RESET}] Token is must be a string")
-        elif len(self.__token) == 0:
-            exit(f"[{RED}Error{RESET}] Token is empty")
+    def __init__(self, config: str, code: str, language: str, example: str = ""):
+        self.__config = config
 
         self.__code = code
         if not isinstance(self.__code, str):
@@ -63,17 +59,31 @@ class AutoDoc:
             self.__divided = Divider(self.__code, self.__language).divide()
 
             if len(self.__divided) == 0:
-                print(
+                exit(
                     f"[{RED}END{RESET}] {BOLD}There is nothing to comment in the code{RESET}"
                 )
-                exit(0)
 
             print(
                 f"[{BLUE}2{RESET}] {BOLD}Text is divided into {len(self.__divided)} parts{RESET}"
             )
 
             print(f"[{BLUE}3{RESET}] {BOLD}Connecting to ChatGPT{RESET}")
-            self.__chatbot = Chatbot({"session_token": self.__token})
+            if self.__config["session_token"]:
+                self.__chatbot = Chatbot(
+                    config={
+                        "session_token": self.__config["session_token"],
+                    }
+                )
+            elif self.__config["email"] and self.__config["password"]:
+                self.__chatbot = Chatbot(
+                    config={
+                        "email": self.__config["email"],
+                        "password": self.__config["password"],
+                    }
+                )
+            else:
+                raise ValueError("No login details")
+
             self.__conversation = None
 
             self.__count = 1
