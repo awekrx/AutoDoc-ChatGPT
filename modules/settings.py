@@ -9,4 +9,14 @@ BOLD = "\033[1m"
 
 
 class Settings:
-    supported_languages = ["py"]
+    supported_languages = ["py", "ts"]
+    divide_start = {
+        "py": r"(?<!.)(class|def)",
+        "ts": r"(?<!.)(class|export class|function|interface|type)",
+        "js": r"(?<!.)(class|function)",
+    }
+    divide_end = {
+        "py": r"\n(def|class)",
+        "ts": r"\n(function|class|interface|type)",
+        "js": r"\n(function|class)",
+    }
