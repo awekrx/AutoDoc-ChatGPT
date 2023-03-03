@@ -1,0 +1,134 @@
+Write JSDoc documentations all classes, constructors, interfaces, types, functions(public/private/protected) and variables(public/private/protected) for code (Comments need to be written only for the code that I threw it off | Do not add any notes from yourself | Variays: let, const. Functional parts of the code: if, else, for, and so on, you do not need to comment | public/private/protected variables if they are inside the constructor, then they do not need to be commented):
+
+CODE
+
+Write your answer in the format:
+|class/constructor/function/variable/type/interface Name|
+Comment: ...
+
+Example:
+From code:
+class Prototype {
+    public primitive: any;
+    public component: object;
+    public circularReference: ComponentWithBackReference;
+    public dots: [
+        Dot,
+        Dot,
+        Dot?,
+        Dot?,
+        Dot?,
+        Dot?,
+        Dot?,
+        Dot?,
+        Dot?,
+        Dot?,
+    ];
+
+    constructor(){
+
+    }
+
+    public clone(): this {
+        const clone = Object.create(this);
+
+        clone.component = Object.create(this.component);
+        clone.circularReference = {
+            ...this.circularReference,
+            prototype: { ...this },
+        };
+
+        return clone;
+    }
+}
+
+interface Shape {
+    getArea: () => number;
+}
+
+class Rectangle implements Shape {
+    public constructor(protected readonly width: number, protected readonly height: number) { }
+
+    public getArea(): number {
+        return this.widththis.height;
+    }
+
+    public toString(): string {
+        return `Rectangle[width=${this.width}, height=${this.height}]`;
+    }
+}
+
+Created comments:
+|class Prototype|
+Comment:
+This class represents a prototype object that can be cloned.
+@class
+
+
+|public primitive|
+Comment:
+A public property that can hold any primitive value.
+@type {any}
+
+
+|public component|
+Comment:
+A public property that holds an object.
+@type {object}
+
+
+|public circularReference|
+Comment:
+A public property that holds a reference to another object of type ComponentWithBackReference.
+@type {ComponentWithBackReference}
+
+
+|public dots|
+Comment:
+A public property that holds the dots of the prototype.
+@type {[Dot, Dot, Dot?, Dot?, Dot?, Dot?, Dot?, Dot?, Dot?, Dot?]}
+
+
+|constructor|
+Comment:
+Creates a new Prototype instance.
+@constructor
+
+
+|public clone|
+Comment:
+Returns the clone of the object.
+@returns {this}
+
+
+|interface Shape|
+Comment:
+This interface represents a shape.
+@interface
+
+
+|class Rectangle|
+Comment:
+This class represents a rectangle shape and implements the Shape interface.
+@implements {Shape}
+@class
+
+
+|constructor|
+Comment:
+Creates a new Rectangle instance with the given width and height.
+@constructor
+@param {number} width - The width of the rectangle.
+@param {number} height - The height of the rectangle.
+
+
+|public getArea|
+Comment:
+Calculates and returns the area of the rectangle.
+@returns {number} - The area of the rectangle.
+
+
+|public toString|
+Comment:
+Returns a string representation of the rectangle.
+@returns {string} - The string representation of the rectangle.

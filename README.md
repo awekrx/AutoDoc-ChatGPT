@@ -4,7 +4,6 @@ AutoDoc-ChatGPT is a Python script that leverages the power of ChatGPT model to 
 
 With AutoDoc-ChatGPT, you can easily generate comprehensive documentation for your codebase. Simply provide the path to file you wish to document, and AutoDoc-ChatGPT will generate a detailed description of its functionality, parameters, and return values in natural language.
 
-
 ## Getting Started
 
 ### Installing
@@ -22,8 +21,12 @@ pip install -r requirements.txt
 ```
 
 ## Supported programming languages
+
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" title="python" width=100 />
 
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" title="typescript(beta)" width=100 />
+
+> discaimer: TypeScript has some bugs and is under testing
 
 ## Usage
 
@@ -83,8 +86,8 @@ print(result)
 ```
 
 ## Disclaimer
-Doesn't always create correct comments. It doesn't always mean what you want. Use as a draft of comments that may need to be edited.
 
+Doesn't always create correct comments. It doesn't always mean what you want. Use as a draft of comments that may need to be edited.
 
 ## License
 
