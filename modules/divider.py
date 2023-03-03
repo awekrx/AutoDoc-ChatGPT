@@ -1,4 +1,5 @@
 import re
+from modules.settings import Settings
 
 
 class Divider:
@@ -10,12 +11,8 @@ class Divider:
     def divide(
         self,
     ) -> list[str]:
-        if self.__language == "py":
-            return self.__py()
-
-    def __py(self) -> list[str]:
-        starts = re.finditer(r"(?<!.)(class|def)", self.__text)
-        ends = re.finditer(r"\n(def|class)", self.__text)
+        starts = re.finditer(Settings.divide_start[self.__language], self.__text)
+        ends = re.finditer(Settings.divide_end[self.__language], self.__text)
 
         while True:
             start = None
