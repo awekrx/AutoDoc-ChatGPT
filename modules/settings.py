@@ -12,11 +12,11 @@ class Settings:
     supported_languages = ["py", "ts"]
     divide_start = {
         "py": r"(?<!.)(class|def)",
-        "ts": r"(?<!.)(class|export class|function|interface|type)",
+        "ts": r"(?<!.)(class|function|interface|type|export)",
         "js": r"(?<!.)(class|function)",
     }
     divide_end = {
         "py": r"\n(def|class)",
-        "ts": r"\n(function|class|interface|type)",
+        "ts": r"\n(function|class|interface|type|export)",
         "js": r"\n(function|class)",
     }
