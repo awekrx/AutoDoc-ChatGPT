@@ -91,15 +91,12 @@ class Result:
             comments[i] = re.sub(r"\n\s\*\s\n\s\*\s", "", comments[i])
             for j in range(self.__code.find(names[i]), 0, -1):
                 if self.__code[j] == "\n":
-                    # from_new_string = self.__code[j + 1 :]
-                    # tabs_end = re.search(r"[a-zA-Z]", from_new_string).start()
-                    # tabs = from_new_string[:tabs_end]
-                    # comments[i].replace(" * ", f"{tabs} * ")
-                    # splitted_code = list(self.__code)
-                    # splitted_code[j] = f"\n{tabs}/**\n{comments[i]}\n{tabs} */\n"
-                    # self.__code = "".join(splitted_code)
+                    from_new_string = self.__code[j + 1 :]
+                    tabs_end = re.search(r"[a-zA-Z]", from_new_string).start()
+                    tabs = from_new_string[:tabs_end]
+                    comments[i] = re.sub(r"\n", f"\n{tabs}", comments[i])
                     splitted_code = list(self.__code)
-                    splitted_code[j] = f"\n/**\n{comments[i]}\n */\n"
+                    splitted_code[j] = f"\n{tabs}/**\n{tabs}{comments[i]}\n{tabs} */\n"
                     self.__code = "".join(splitted_code)
                     break
             else:
