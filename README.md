@@ -23,11 +23,12 @@ pip install -r requirements.txt
 ## Supported programming languages
 
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" title="python" width=100 />
-
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" title="typescript(beta)" width=100 />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" title="typescript(beta)" width=100 />
 
-> discaimer: TypeScript has some bugs and is under testing
-
+> `disclaimer`: TypeScript and JavScript has some bugs and is under testing
+> `disclaimer2.0`: There is a known error commenting files with 2 or more classes that have methods with the same name.
+>
 ## Usage
 
 ### Edit config

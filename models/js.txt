@@ -1,0 +1,130 @@
+Write JSDoc documentations all classes, constructors, functions() for code (Comments need to be written only for the code that I threw it off | Do not add any notes from yourself | Variays: let, const. Functional parts of the code: if, else, for, and so on, you do not need to comment | Comments for everything that is not a class or function initialization are not needed, that is, for variables that are behind the class or use of functions, you do not need to comment):
+
+What not to comment:
+const test = 1
+read()
+if(x > 2)
+and etc
+
+CODE
+
+Write your answer in the format:
+|class/constructor/function Name|
+Comment: ...
+
+Example:
+From code:
+class Prototype {
+    primitive: any;
+    component: object;
+    circularReference: ComponentWithBackReference;
+    dots: [
+        Dot,
+        Dot,
+        Dot?,
+        Dot?,
+        Dot?,
+        Dot?,
+        Dot?,
+        Dot?,
+        Dot?,
+        Dot?,
+    ];
+
+    constructor(){
+
+    }
+
+    clone(): this {
+        const clone = Object.create(this);
+
+        clone.component = Object.create(this.component);
+        clone.circularReference = {
+            ...this.circularReference,
+            prototype: { ...this },
+        };
+
+        return clone;
+    }
+}
+
+Rectangle implements Shape {
+    constructor(protected readonly width: number, protected readonly height: number) { }
+
+    getArea(): number {
+        return this.widththis.height;
+    }
+
+    toString(): string {
+        return `Rectangle[width=${this.width}, height=${this.height}]`;
+    }
+}
+
+Created comments:
+|class Prototype|
+Comment:
+This class represents a prototype object that can be cloned.
+@class
+
+
+|primitive|
+Comment:
+A property that can hold any primitive value.
+@type {any}
+
+
+|component|
+Comment:
+A property that holds an object.
+@type {object}
+
+
+|circularReference|
+Comment:
+A property that holds a reference to another object of type ComponentWithBackReference.
+@type {ComponentWithBackReference}
+
+
+|dots|
+Comment:
+A property that holds the dots of the prototype.
+@type {[Dot, Dot, Dot?, Dot?, Dot?, Dot?, Dot?, Dot?, Dot?, Dot?]}
+
+
+|constructor|
+Comment:
+Creates a new Prototype instance.
+@constructor
+
+
+|clone|
+Comment:
+Returns the clone of the object.
+@returns {this}
+
+
+|class Rectangle|
+Comment:
+This class represents a rectangle shape and implements the Shape interface.
+@implements {Shape}
+@class
+
+
+|constructor|
+Comment:
+Creates a new Rectangle instance with the given width and height.
+@constructor
+@param {number} width - The width of the rectangle.
+@param {number} height - The height of the rectangle.
+
+
+|getArea|
+Comment:
+Calculates and returns the area of the rectangle.
+@returns {number} - The area of the rectangle.
+
+
+|toString|
+Comment:
+Returns a string representation of the rectangle.
+@returns {string} - The string representation of the rectangle.
