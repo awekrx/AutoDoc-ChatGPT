@@ -10,7 +10,7 @@ class Result:
     def get(self) -> str:
         if self.__language == "py":
             return self.__py()
-        elif self.__language == "ts":
+        elif self.__language == "ts" or self.__language == "js":
             return self.__ts()
 
     def __py(self) -> str:
@@ -69,8 +69,8 @@ class Result:
             except:
                 break
 
-        names = []
-        comments = []
+        names: list[str] = []
+        comments: list[str] = []
         for i in range(len(indexes)):
             names.append(self.__text_comment[indexes[i][0] + 1 : indexes[i][1] - 1])
             if i < len(indexes) - 1:
@@ -89,7 +89,9 @@ class Result:
         for i in range(len(names)):
             comments[i] = " * " + comments[i].replace("\n", "\n * ")
             comments[i] = re.sub(r"\n\s\*\s\n\s\*\s", "", comments[i])
-            for j in range(self.__code.find(names[i]), 0, -1):
+            index = self.__code.find(names[i])
+
+            for j in range(index, 0, -1):
                 if self.__code[j] == "\n":
                     from_new_string = self.__code[j + 1 :]
                     tabs_end = re.search(r"[a-zA-Z]", from_new_string).start()
