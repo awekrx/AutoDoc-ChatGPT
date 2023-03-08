@@ -17,7 +17,7 @@ colorama_init()
 
 
 class AutoDoc:
-    def __init__(self, config: str, code: str, language: str, example: str = ""):
+    def __init__(self, config: str, code: str, language: str):
         self.__config = config
 
         self.__code = code
@@ -29,12 +29,6 @@ class AutoDoc:
         self.__language = language
         if not self.__language in Settings.supported_languages:
             exit(f"[{RED}Error{RESET}] .{self.__language} language not supported")
-
-        self.__example = example
-        if not isinstance(self.__example, str):
-            exit(f"[{RED}Error{RESET}] Example is must be a string")
-        elif len(self.__example) > 0:
-            self.__language = "example"
 
     def __ask(self, code) -> str:
         response = None

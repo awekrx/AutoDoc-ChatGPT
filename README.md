@@ -23,16 +23,16 @@ pip install -r requirements.txt
 ## Supported programming languages
 
 - [X] <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="20" /> Python
-- [X]  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="20" /> JavaScript
-- [X]  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="20" /> TypeScript
-- [ ]  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" height="20" /> Go
+- [X] <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="20" /> JavaScript
+- [X] <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="20" /> TypeScript
+- [ ] <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" height="20" /> Go
 - [ ] <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" height="20" /> C#
-- [ ]  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" height="20" /> C++
-- [ ]  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" height="20" /> PHP
-- [ ]  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" height="20" /> Ruby
-- [ ]  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg" height="20" /> Rust
-- [ ]  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="20" /> Java
-- [ ]  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" height="20" /> Kotlin
+- [ ] <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" height="20" /> C++
+- [ ] <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" height="20" /> PHP
+- [ ] <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" height="20" /> Ruby
+- [ ] <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg" height="20" /> Rust
+- [ ] <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="20" /> Java
+- [ ] <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" height="20" /> Kotlin
 
 And others...
 
@@ -61,7 +61,7 @@ After execution, the file `yourfilename_commented.language` is created in the fo
 OR
 
 ```bash
-py main.py -file "path to the file" -example "path to the example file"
+py main.py -file "path to the file"
 ```
 
 __Not recommended, little tested.__
@@ -109,4 +109,5 @@ This project is licensed under the MIT License.
 ## Acknowledgments
 
 Thanks a lot to the development of AI and separately to [СhatGPT](https://chat.openai.com) for generating the Readme.
+
 And also [acheong08](https://github.com/acheong08) for creating [ChatGPT](https://github.com/acheong08/ChatGPT).
